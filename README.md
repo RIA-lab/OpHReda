@@ -8,4 +8,4 @@ unzip it to the OpHReda folder
 
 set the enzyme_seq as the sequence that needs optimal pH prediction in the inference.py
 
-python inference to predict the optimal pH
+run python inference.py to predict the optimal pH
