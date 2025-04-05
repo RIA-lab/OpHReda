@@ -1,0 +1,30 @@
+dataset:
+  train: 'pH_dataset/augmentation/train.csv'
+  val: 'pH_dataset/augmentation/val.csv'
+  test: 'pH_dataset/augmentation/test.csv'
+
+model:
+  tokenizer_path: 'pretrain_models/esm150'
+  pretrain_model_path: 'pretrain_models/esm150'
+  database: 'pH_dataset/augmentation/database.pt'
+  conv_in: 640
+  conv_mid: 1280
+  conv_out: 640
+  num_labels: 12
+
+
+training:
+  lr: 5e-4
+  num_epochs: 15
+  train_batch_size: 128
+  eval_batch_size: 128
+  weight_decay: 1e-4
+  dataloader_num_workers: 0
+  dataloader_pin_memory: True
+  save_total_limit: 2
+  fp16: True
+  max_grad_norm: 1.0
+
+wandb:
+  project: 'OpHReda'
+  run_name: 'mrlat'

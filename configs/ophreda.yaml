@@ -1,0 +1,36 @@
+dataset:
+  train: 'pH_dataset/pHopt/phopt_training.fasta'
+  val: 'pH_dataset/pHopt/phopt_validation.fasta'
+  test: 'pH_dataset/pHopt/phopt_testing.fasta'
+
+model:
+  tokenizer_path: 'pretrain_models/esm150'
+  pretrain_model_path: 'pretrain_models/esm150'
+  database: 'pH_dataset/augmentation/database.pt'
+  k: 3
+  num_layers: 3
+  num_heads: 8
+  retrieval_ratio: 0.2
+  conv_in: 640
+  conv_mid: 1280
+  conv_out: 640
+  num_labels: 12
+  calibrator_num_heads: 8
+  calibrator_num_layers: 6
+  calibrator_embed_dim: 640
+
+training:
+  lr: 5e-4
+  num_epochs: 10
+  train_batch_size: 128
+  eval_batch_size: 128
+  weight_decay: 1e-4
+  dataloader_num_workers: 0
+  dataloader_pin_memory: True
+  save_total_limit: 2
+  fp16: True
+  max_grad_norm: 1.0
+
+wandb:
+  project: 'OpHReda'
+  run_name: 'OpHReda'
