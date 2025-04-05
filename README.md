@@ -12,9 +12,9 @@ OpHReda is a deep learning framework for predicting the optimal pH of enzymes by
 
 1. **Download model weights**
 
-   Download the pretrained model weights from the link below:
+   Download the weight files from the link below:
 
-   [Download OpHReda Weights](https://drive.google.com/file/d/1XUSgIyHYzIAArE42QtbNWzG3eDCdCNjG/view?usp=sharing)
+   [Download weight files](https://drive.google.com/file/d/1PusD1o6XLStYTua9SU6KKJXUEzyyRlwz/view?usp=sharing)
 
 2. **Unzip the model weights**
 
